@@ -1,0 +1,9 @@
+halongtpnet
+
+messages none  defined. 
+P1 { P2, P4, P5, P6 } Node (331 @ 197) (211)
+P2 { P1, P3, P4, P5, P6 } Node (207 @ 215) (211)
+P3 { P2, P4, P5 } Node (124 @ 303) (211)
+P4 { P1, P2, P3, P5, P6 } Node (177 @ 307) (211)
+P5 { P1, P2, P3, P4, P6 } Node (289 @ 322) (211)
+P6 { P1, P2, P4, P5 } Node (350 @ 263) (211)

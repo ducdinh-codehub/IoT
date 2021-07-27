@@ -1,0 +1,56 @@
+-- Step 1: Get X and Y from net location
+   -- Get elevation from "halongtp0.occ"
+   -- To get elevation from "halongtp0.occ" 
+   -- we need to access in the data 
+   -- file "halongdata0.occ" which contains 
+   -- the information of each cell
+-- Each cell contains these data
+-- xLoc, yLoc, elevation, range
+
+
+DATA TYPE BBox
+  RECORD
+    INT Top,Left,Bottom,Right:
+:
+
+PROTOCOL diam.proto IS REAL64:
+
+PROC CellNode([]CHAN OF diam.proto in,out, VAL INT Identity, CHAN OF BYTE toMux)
+  CellArray myCell:
+  CellPosition myPosition:
+  REAL64 myElevation:
+  [MaxFanOut] REAL64 elvBuf:
+  SEQ
+    myCell := Cells[Identity]
+    myPosition := myCell[position]
+    myElevation := myPosition[elevation]
+    SEQ Turns=0 FOR MaxNodes-1
+      SEQ
+        PAR
+          PAR i=0 FOR SIZE in
+            in[i] ? elvBuf[i]
+          PAR i=0 FOR SIZE out
+            out[i] ! myElevation
+        SEQ i=0 FOR SIZE in
+          IF
+            myElevation < elvBuf[i]
+              myElevation := elvBuf[i]
+            TRUE
+              SKIP
+    out.real64(myElevation, 0, 0, toMux)
+    toMux ! '*n'
+:
+
+PROC Mux([]CHAN OF BYTE fromNodes, CHAN OF BYTE out)
+  BYTE ch:
+  SEQ
+    SEQ i = 0 FOR MaxNodes
+      SEQ
+        ch := ' '
+        WHILE ch <> '*n'
+          SEQ
+            fromNodes[i] ? ch
+            out ! ch
+:
+
+

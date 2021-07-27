@@ -1,0 +1,110 @@
+-- Step 1: Get X and Y from net location
+   -- Get the X and Y location from sensor system file "halongnet.occ"
+-- Step 2: Send the BBox's location to all the process
+   --
+-- Ex3
+-- Each process keep the leftmost xLoc position in a variable
+-- 'left'.
+-- It does a number of loops equal to MaxNodes  -> (SEQ t=0 
+-- FOR maxNode). 
+-- At each loop, the process send a copy of its 'left' to all
+-- of its neighbours.
+-- It receives the neighbour opinion about left 
+-- PAR is mandatory.
+-- It compares with its opinion.
+-- If the received is smaller, it updates its opinion.
+-- At the end all the process print their opinions, should be
+-- the same !!!
+-- You will need to define diam.proto as being INT to allow
+-- xLoc traffic.
+
+-- Ex4
+-- do the same with the whole bounding box!
+-- left, right, top, bottom
+-- handle using myBBox
+
+
+DATA TYPE BBox
+  RECORD
+    INT Top,Left,Bottom,Right:
+:
+
+PROTOCOL diam.proto IS BBox:
+
+PROC Node([]CHAN OF diam.proto in,out, VAL INT Identity, CHAN OF BYTE toMux)
+  INT MyXLoc:
+  INT MyYLoc:
+  --INT left, leftreceived:
+  --[MaxFanOut] INT leftBuf:
+  [MaxFanOut] BBox BBuf:
+  BBox myBBox:
+  SEQ
+    MyXLoc := NetLocation[Identity][xLoc]
+    MyYLoc := NetLocation[Identity][yLoc]
+    --left := MyXLoc
+    -- Initial BBOX
+    myBBox[Left] := MyXLoc
+    myBBox[Right] := MyXLoc
+    myBBox[Top] := MyYLoc
+    myBBox[Bottom] := MyYLoc
+    SEQ Turns=0 FOR MaxNodes-1
+      SEQ
+        PAR
+          PAR i=0 FOR SIZE out
+            out[i] ! myBBox
+          PAR i=0 FOR SIZE in
+            in[i] ? BBuf[i]
+        SEQ i=0 FOR SIZE in
+          SEQ
+            IF
+              myBBox[Left] > BBuf[i][Left]
+                myBBox[Left] := BBuf[i][Left]
+              TRUE
+                SKIP
+            IF
+              myBBox[Right] > BBuf[i][Right]
+                myBBox[Right] := BBuf[i][Right]
+              TRUE
+                SKIP
+            IF
+              myBBox[Top] > BBuf[i][Top]
+                myBBox[Top] := BBuf[i][Top]
+              TRUE
+                SKIP
+            IF
+              myBBox[Bottom] > BBuf[i][Bottom]
+                myBBox[Bottom] := BBuf[i][Bottom]
+              TRUE
+                SKIP
+    toMux ! 'L'
+    toMux ! ':'
+    out.number(myBBox[Left], 0, toMux)
+    toMux ! ' '
+    toMux ! 'R'
+    toMux ! ':'
+    out.number(myBBox[Right], 0, toMux)
+    toMux ! ' '
+    toMux ! 'T'
+    toMux ! ':'
+    out.number(myBBox[Top], 0, toMux)
+    toMux ! ' '
+    toMux ! 'B'
+    toMux ! ':'
+    out.number(myBBox[Bottom], 0, toMux)
+    toMux ! '*n'
+    SKIP
+:
+
+PROC Mux([]CHAN OF BYTE fromNodes, CHAN OF BYTE out)
+  BYTE ch:
+  SEQ
+    SEQ i = 0 FOR MaxNodes
+      SEQ
+        ch := ' '
+        WHILE ch <> '*n'
+          SEQ
+            fromNodes[i] ? ch
+            out ! ch
+:
+
+
