@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.12.13)  27 JUL 2021 18:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.12.13)  27 JUL 2021 19:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1003,16 +1003,6 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.218 \\
-        [2\baselineskip]
-? 
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
 l.222 \\
         [2\baselineskip]
 ? 
@@ -1027,23 +1017,33 @@ l.226 \\
         [2\baselineskip]
 ? 
 
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.230 \\
+        [2\baselineskip]
+? 
+
 ! LaTeX Error: Environment pic3 undefined.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.227 \centering{\begin{pic3}
+l.231 \centering{\begin{pic3}
                              }
 ? 
 ! Extra }, or forgotten \endgroup.
-l.227 \centering{\begin{pic3}}
+l.231 \centering{\begin{pic3}}
                               
 ? 
 <iot_project_3.png, id=34, 618.81187pt x 246.9225pt>
 File: iot_project_3.png Graphic file (type png)
  <use iot_project_3.png>
-Package pdftex.def Info: iot_project_3.png used on input line 228.
+Package pdftex.def Info: iot_project_3.png used on input line 232.
 (pdftex.def)             Requested size: 276.00105pt x 110.13448pt.
 
 
@@ -1053,7 +1053,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.230 \caption
+l.234 \caption
               {Figure 3: Display maximum elevation on terminal.}
 ? 
 
@@ -1063,21 +1063,21 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.231 \end{pic3}
+l.235 \end{pic3}
                 
 ? 
 [7 <./iot_project_3.png (PNG copy)>] (./report.aux) )
 (\end occurred inside a group at level 3)
 
-### simple group (level 3) entered at line 227 ({)
+### simple group (level 3) entered at line 231 ({)
 ### simple group (level 2) entered at line 154 ({)
 ### simple group (level 1) entered at line 38 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 12807 strings out of 494953
- 243484 string characters out of 6180976
+ 12805 strings out of 494953
+ 243432 string characters out of 6180976
  313872 words of memory out of 5000000
- 15873 multiletter control sequences out of 15000+600000
+ 15871 multiletter control sequences out of 15000+600000
  8807 words of font info for 31 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  54i,6n,73p,828b,1454s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1089,7 +1089,7 @@ e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texli
 ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/f
 onts/type1/public/amsfonts/cm/cmsy9.pfb>
-Output written on report.pdf (7 pages, 509285 bytes).
+Output written on report.pdf (7 pages, 509494 bytes).
 PDF statistics:
  66 PDF objects out of 1000 (max. 8388607)
  45 compressed objects within 1 object stream
