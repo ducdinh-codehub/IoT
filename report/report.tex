@@ -203,9 +203,13 @@ VAL INT Identity, CHAN OF BYTE toMux)
           PAR i=0 FOR SIZE out
             out[i] ! myElevation
         SEQ i=0 FOR SIZE in
-          IF
-            myElevation < elvBuf[i]
-              myElevation := elvBuf[i]
+           IF 
+            elvBuf[i] > 0.0 -- Elevation <= 0 is sea
+              IF     -- Keep updating until find sea  
+                myElevation < elvBuf[i]
+                  myElevation := elvBuf[i]
+                TRUE
+                  SKIP
             TRUE
               SKIP
     out.real64(myElevation, 0, 0, toMux)
