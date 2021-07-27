@@ -6,7 +6,7 @@
 \graphicspath{{./}}
 \title{
 	Report Iot Interfaces From Hardware To 			Software And Wireless Communication
-	\\[1\baselineskip]
+		\\[1\baselineskip]
 	Subject: TP Capteurs et environment, 2021
 }
 \author{
@@ -26,8 +26,8 @@
 \lstset{style=mystyle}
 
 \maketitle
-\large\begin{document}
 \newpage
+\begin{document}
 \section{Compute geographic bounding box}
 \subsection{*What is geographic bounding box ?}
 \raggedright
@@ -43,25 +43,40 @@
 \\[1\baselineskip]
 \raggedright
 \subsection{*How can we determine the bounding box ?}
+
 - \textbf{Step 1}: We need to create the behaviour file whose name is "nodes-test-include.occ". In this file, we need to add two classes one is "Node" and the other is "Mux". "Node" represents the sensor, "Mux" is the method that displays all the output from "Node".
+
 \\[2\baselineskip]
+
 - \textbf{Step 2}: We need to get the x-y coordinator of each sensor by using the "Node" class in "nodes-test-include.occ" file. To do that we can access to the global array "NetLocation" in "halongtpnet.occ" file which contains all the information of each sensor.
+
 \\[2\baselineskip]
+
 - \textbf{Step 3}: After we find the bounding box, we need to use cooperation techniques to send the coordinator of bounding box to all sensor.
+
 \\[2\baselineskip]
+
 - \textbf{*Note}: To find the bounding box we need to find the most left and most right value of the coordinator.
+
 \\[1\baselineskip]
+
 \subsection{Code}
 \begin{tcolorbox}
 \begin{lstlisting}
+DATA TYPE BBox
+  RECORD
+    INT Top,Left,Bottom,Right:
+:
+PROTOCOL diam.proto IS BBox: -- Output type is BBox 
 PROC Node([]CHAN OF diam.proto in,out, VAL INT Identity,
 CHAN OF BYTE toMux)
+  -- MyXLoc, MyYLoc are variables which store xLoc, yLoc
   INT MyXLoc:
   INT MyYLoc:
+  -- 
   [MaxFanOut] BBox BBuf:
   BBox myBBox:
   SEQ
-    -- MyXLoc, MyYLoc are variables which store 
     MyXLoc := NetLocation[Identity][xLoc]
     MyYLoc := NetLocation[Identity][yLoc]
     -- Initial BBOX
@@ -127,6 +142,15 @@ CHAN OF BYTE toMux)
 \end{tcolorbox}
 \newpage
 \subsection{Result}
+\\[2\baselineskip]
+\begin{tcolorbox}
+Compile command: Kroc -lcourse halongtpnet.occ 
+\end{tcolorbox}
+\\[2\baselineskip]
+\begin{tcolorbox}
+Run command: ./halongtpnet
+\end{tcolorbox}
+\\[2\baselineskip]
 \centering{\begin{pic2}}
 \includegraphics[width=0.80\textwidth]{iot_project_2}
 \\
@@ -136,15 +160,27 @@ CHAN OF BYTE toMux)
 \section{Find the maximum elevation}
 \raggedright
 \subsection{*How can we find the elevation of each cell ?}
-- \textbf{Step 1}: We need to create the behaviour file whose name is "nodes-test-include-cell.occ". In this file, we need to add two classes one is "CellNode" and the other is "Mux". "CellNode" represents each cell in the map, "Mux" is the method that displays all the output from "CellNode".
+
+- \textbf{Step 1}: We need to create the behaviour file whose name is "nodes-test-include-cell.occ". In this file, we need to add two processes one is "CellNode" and the other is "Mux". "CellNode" represents each cell in the map, "Mux" is the method that displays all the output from "CellNode".
+
 \\[2\baselineskip]
-- \textbf{Step 2}: We need to get the elevation of each sensor by using the "CellNode" class in "nodes-test-include-cell.occ" file. To do that we can access to the global array "NetLocation" in "halongtp0.occ" and "halongtpData0.occ" files. In the "halongtpData0.occ" we can get all the parameter of the map through these parameters we can access to each "CellNode" in the "halongtp0.occ" so that we can get the elevation of each cell.
+
+- \textbf{Step 2}: We need to get the elevation of each sensor by using the "CellNode" process in "nodes-test-include-cell.occ" file. First, we can get all the parameter of all cell in the "halongtpData0.occ". Second, through these parameters we can access to each "CellNode" in the "halongtp0.occ" so that we can get the elevation of each cell.
+
 \\[2\baselineskip]
-- \textbf{Step 3}: After we find the elevation, we need to use cooperation techniques to send the elevation to all sensor and find the max.
+
+- \textbf{Step 3}: After we find the elevation, we need to use cooperation techniques to send the elevation to all sensor and find the maximum elevation.
+
 \\[2\baselineskip]
+
 \subsection{Code}
 \begin{tcolorbox}
 \begin{lstlisting}
+DATA TYPE BBox
+  RECORD
+    INT Top,Left,Bottom,Right:
+:
+PROTOCOL diam.proto IS BBox: -- Output type is BBox
 PROC CellNode([]CHAN OF diam.proto in,out, 
 VAL INT Identity, CHAN OF BYTE toMux)
   -- Get all cells in the array
@@ -177,7 +213,17 @@ VAL INT Identity, CHAN OF BYTE toMux)
 :
 \end{lstlisting}
 \end{tcolorbox}
+\newpage
 \subsection{Result}
+\\[2\baselineskip]
+\begin{tcolorbox}
+Compile command: Kroc -lcourse halongtp0.occ 
+\end{tcolorbox}
+\\[2\baselineskip]
+\begin{tcolorbox}
+Run command: ./halongtp0 
+\end{tcolorbox}
+\\[2\baselineskip]
 \centering{\begin{pic3}}
 \includegraphics[width=0.80\textwidth]{iot_project_3}
 \\

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.12.13)  27 JUL 2021 14:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.12.13)  27 JUL 2021 18:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -677,23 +677,40 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 28.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 28.
-(./report.aux)
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.29 \newpage
+             
+? 
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.29 \newpage
+             
+? 
+[1
+
+
+\providecommand\tcolorbox@label[2]{}
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./report.aux)
 \openout1 = `report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
 \c@lstlisting=\count110
- (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+
+(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count111
 \scratchdimen=\dimen146
@@ -754,9 +771,7 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-ABD: EveryShipout initializing macros [1
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+ABD: EveryShipout initializing macros
 
 ! LaTeX Error: There's no line here to end.
 
@@ -809,36 +824,107 @@ l.42 \end{pic1}
                
 ? 
 [2 <./iot_project.png (PNG copy)>]
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 64.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 64.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 73.
 
-Overfull \hbox (2.64899pt too wide) in paragraph at lines 84--85
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.49 \\
+       [2\baselineskip]
+? 
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.53 \\
+       [2\baselineskip]
+? 
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.57 \\
+       [2\baselineskip]
+? 
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.61 \\
+       [1\baselineskip]
+? 
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <9> on input line 70.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 70.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 88.
+
+Overfull \hbox (2.64899pt too wide) in paragraph at lines 99--100
 [][][][][][][][][][][][][][][][][][][][][] 
  []
 
-LaTeX Font Info:    Try loading font information for OML+cmr on input line 88.
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 103.
+
 (/usr/share/texlive/texmf-dist/tex/latex/base/omlcmr.fd
 File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <9> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 88.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 123.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 103.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 138.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <9> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 123.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 138.
  [3]
 Overfull \vbox (31.91684pt too high) has occurred while \output is active []
 
 
 [4]
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.145 \\
+        [2\baselineskip]
+? 
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.149 \\
+        [2\baselineskip]
+? 
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.153 \\
+        [2\baselineskip]
+? 
 
 ! LaTeX Error: Environment pic2 undefined.
 
@@ -846,17 +932,17 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.130 \centering{\begin{pic2}
+l.154 \centering{\begin{pic2}
                              }
 ? 
 ! Extra }, or forgotten \endgroup.
-l.130 \centering{\begin{pic2}}
+l.154 \centering{\begin{pic2}}
                               
 ? 
 <iot_project_2.png, id=27, 499.11469pt x 102.3825pt>
 File: iot_project_2.png Graphic file (type png)
  <use iot_project_2.png>
-Package pdftex.def Info: iot_project_2.png used on input line 131.
+Package pdftex.def Info: iot_project_2.png used on input line 155.
 (pdftex.def)             Requested size: 276.00105pt x 56.61674pt.
 
 
@@ -866,7 +952,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.133 \caption
+l.157 \caption
               {Figure 2: Display bounding box coordinator on terminal.}
 ? 
 
@@ -876,10 +962,70 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.134 \end{pic2}
+l.158 \end{pic2}
                 
 ? 
-[5 <./iot_project_2.png (PNG copy)>]
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.166 \\
+        [2\baselineskip]
+? 
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.170 \\
+        [2\baselineskip]
+? 
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.174 \\
+        [2\baselineskip]
+? 
+[5 <./iot_project_2.png (PNG copy)>] [6]
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.218 \\
+        [2\baselineskip]
+? 
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.222 \\
+        [2\baselineskip]
+? 
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.226 \\
+        [2\baselineskip]
+? 
 
 ! LaTeX Error: Environment pic3 undefined.
 
@@ -887,17 +1033,17 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.181 \centering{\begin{pic3}
+l.227 \centering{\begin{pic3}
                              }
 ? 
 ! Extra }, or forgotten \endgroup.
-l.181 \centering{\begin{pic3}}
+l.227 \centering{\begin{pic3}}
                               
 ? 
-<iot_project_3.png, id=31, 618.81187pt x 246.9225pt>
+<iot_project_3.png, id=34, 618.81187pt x 246.9225pt>
 File: iot_project_3.png Graphic file (type png)
  <use iot_project_3.png>
-Package pdftex.def Info: iot_project_3.png used on input line 182.
+Package pdftex.def Info: iot_project_3.png used on input line 228.
 (pdftex.def)             Requested size: 276.00105pt x 110.13448pt.
 
 
@@ -907,7 +1053,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.184 \caption
+l.230 \caption
               {Figure 3: Display maximum elevation on terminal.}
 ? 
 
@@ -917,21 +1063,21 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.185 \end{pic3}
+l.231 \end{pic3}
                 
 ? 
-[6 <./iot_project_3.png (PNG copy)>] (./report.aux) )
+[7 <./iot_project_3.png (PNG copy)>] (./report.aux) )
 (\end occurred inside a group at level 3)
 
-### simple group (level 3) entered at line 181 ({)
-### simple group (level 2) entered at line 130 ({)
+### simple group (level 3) entered at line 227 ({)
+### simple group (level 2) entered at line 154 ({)
 ### simple group (level 1) entered at line 38 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 12799 strings out of 494953
- 243334 string characters out of 6180976
- 311091 words of memory out of 5000000
- 15865 multiletter control sequences out of 15000+600000
+ 12807 strings out of 494953
+ 243484 string characters out of 6180976
+ 313872 words of memory out of 5000000
+ 15873 multiletter control sequences out of 15000+600000
  8807 words of font info for 31 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  54i,6n,73p,828b,1454s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -943,10 +1089,10 @@ e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texli
 ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/f
 onts/type1/public/amsfonts/cm/cmsy9.pfb>
-Output written on report.pdf (6 pages, 506369 bytes).
+Output written on report.pdf (7 pages, 509285 bytes).
 PDF statistics:
- 61 PDF objects out of 1000 (max. 8388607)
- 41 compressed objects within 1 object stream
+ 66 PDF objects out of 1000 (max. 8388607)
+ 45 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  28 words of extra memory for PDF output out of 10000 (max. 10000000)
 
