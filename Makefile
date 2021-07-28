@@ -3,7 +3,7 @@ halongtp0: halongtp0.occ  halongtpData0.occ  nodes-test-include.occ
 
 cinema: halongtp0
 	./halongtp0
-	ffmpeg  -i image%d.ppm halongtp0.mp4
+	ffmpeg -i image%d.ppm halongtp0.mp4
 	
 clean:
 	rm -rf image*

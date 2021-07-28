@@ -1,0 +1,125 @@
+
+#INCLUDE "rastergraphics.module"
+#INCLUDE "rasterio.module"
+
+PROTOCOL diam.proto IS REAL64:
+
+PROC CellNode([]CHAN OF diam.proto in,out, VAL INT id, CHAN OF BYTE toMux)
+  CellPosition position:
+  REAL64 elevation:
+  INT ielev:
+  CellArray myCell:
+  CellPosition myPosition:
+  REAL64 myElevation:
+  [MaxFanOut] REAL64 elvBuf:
+  SEQ
+    myCell := Cells[id]
+    myPosition := myCell[position]
+    myElevation := myPosition[elevation]
+    ielev := INT ROUND myElevation
+    SEQ Turns=0 FOR MaxNodes-1
+      SEQ
+        PAR
+          PAR i=0 FOR SIZE in
+            in[i] ? elvBuf[i]
+          PAR i=0 FOR SIZE out
+            out[i] ! myElevation
+        SEQ i=0 FOR SIZE in
+          IF 
+            elvBuf[i] > 0.0 -- Elevation <= 0 is sea
+              IF            -- Keep updating until find sea  
+                myElevation < elvBuf[i]
+                  myElevation := elvBuf[i]
+                TRUE
+                  SKIP
+            TRUE
+              SKIP
+    out.number(ielev, 0, toMux)
+    toMux ! '*n'
+:
+
+VAL INT Density IS 1:
+PROC Mux([]CHAN OF BYTE fromProc, CHAN OF BYTE out)
+  INT maxX, maxY:
+  [ImageDimY*cellSizeY][ImageDimX*cellSizeX] INT  raster: 
+
+  PROC RGBToRaster( Depth24ByteArray rgbArray, [cellSizeY][cellSizeX]INT cellRaster)
+    RGBPixel rgb:
+    INT rgbColour:
+
+    SEQ
+      SEQ j=0 FOR cellSizeY
+        SEQ i=0 FOR cellSizeX
+          SEQ
+            rgb := rgbArray[(j*cellSizeY) + i]
+            rgbColour := pack.colour(rgb[red],rgb[green],rgb[blue])
+            cellRaster[j][i] := rgbColour
+  :
+
+  PROC Draw()
+    CellPosition cell:
+    [cellSizeY][cellSizeX] INT cellRaster:
+    CellImage image:
+    INT x,y:
+    SEQ
+      SEQ i=0 FOR SIZE Cells
+        SEQ
+          cell := Cells[i][position]
+          x:=  (cell[x]-1) *cellSizeX
+          y:=  (cell[y]-1) *cellSizeY
+          image := Cells[i][image]
+          RGBToRaster(image[pixelArray],cellRaster)
+          copy.raster(cellRaster,x,y,0,0,raster)
+  :
+
+  PROC UpDate(VAL INT id, INT popu)
+    CellPosition position:
+    INT colour, width, height:
+    INT x,y:
+    INT seed, limit, px, py:
+    SEQ
+      seed := id
+      limit := cellSizeX
+      position := Cells[id][position]
+      x := ( position[x] -1)  * cellSizeX
+      y := ( position[y] -1)  * cellSizeY
+      width := cellSizeX
+      height := cellSizeY
+      colour := COLOUR.NAVY
+      draw.rectangle (x, y, width, height, colour,  raster)
+      SEQ i=0 FOR ( popu * Density )
+        SEQ
+          limit := cellSizeX
+          px,seed := random(limit,seed)
+          px := px + x
+          limit := cellSizeY
+          py,seed := random(limit,seed)
+          py := py + y
+          fill.circle.diameter(px,py,2,COLOUR.NAVY,raster)
+  :
+
+  BYTE ch:
+  INT popu:
+  SEQ
+    Draw()
+    SEQ i=0 FOR MaxNodes
+      ALT j=0 FOR SIZE fromProc
+        fromProc [j] ? ch
+          SEQ
+            popu := 0
+            WHILE ch <> '*n'
+              SEQ
+                popu := popu*10
+                popu := popu + ((INT ch) - (INT '0'))
+                fromProc [j] ? ch
+            IF
+              popu>5
+                UpDate(j,popu)
+              TRUE
+                SKIP
+            out.number(popu,4,out)
+            out ! '*n'
+
+    write.raster.ppm("image.ppm",raster)
+    out ! '*n'
+:

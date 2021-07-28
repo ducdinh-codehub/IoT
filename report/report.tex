@@ -44,11 +44,11 @@
 \raggedright
 \subsection{*How can we determine the bounding box ?}
 
-- \textbf{Step 1}: We need to create the behaviour file whose name is "nodes-test-include.occ". In this file, we need to add two classes one is "Node" and the other is "Mux". "Node" represents the sensor, "Mux" is the method that displays all the output from "Node".
+- \textbf{Step 1}: We need to create the behaviour file whose name is "nodes-test-include.occ". In this file, we need to add two processes one is "Node" and the other is "Mux". "Node" represents the sensor, "Mux" is the process that displays all the output from "Node".
 
 \\[2\baselineskip]
 
-- \textbf{Step 2}: We need to get the x-y coordinator of each sensor by using the "Node" class in "nodes-test-include.occ" file. To do that we can access to the global array "NetLocation" in "halongtpnet.occ" file which contains all the information of each sensor.
+- \textbf{Step 2}: We need to get the x-y coordinator of each sensor by using the "Node" process in "nodes-test-include.occ" file. To do that we can access to the global array "NetLocation" in "halongtpnet.occ" file which contains all the information of each sensor.
 
 \\[2\baselineskip]
 
@@ -161,7 +161,7 @@ Run command: ./halongtpnet
 \raggedright
 \subsection{*How can we find the elevation of each cell ?}
 
-- \textbf{Step 1}: We need to create the behaviour file whose name is "nodes-test-include-cell.occ". In this file, we need to add two processes one is "CellNode" and the other is "Mux". "CellNode" represents each cell in the map, "Mux" is the method that displays all the output from "CellNode".
+- \textbf{Step 1}: We need to create the behaviour file whose name is "nodes-test-include-cell.occ". In this file, we need to add two processes one is "CellNode" and the other is "Mux". "CellNode" represents each cell in the map, "Mux" is the process that displays all the output from "CellNode".
 
 \\[2\baselineskip]
 
@@ -176,11 +176,7 @@ Run command: ./halongtpnet
 \subsection{Code}
 \begin{tcolorbox}
 \begin{lstlisting}
-DATA TYPE BBox
-  RECORD
-    INT Top,Left,Bottom,Right:
-:
-PROTOCOL diam.proto IS BBox: -- Output type is BBox
+PROTOCOL diam.proto IS REAL64: -- Output type is REAL64
 PROC CellNode([]CHAN OF diam.proto in,out, 
 VAL INT Identity, CHAN OF BYTE toMux)
   -- Get all cells in the array
@@ -233,5 +229,61 @@ Run command: ./halongtp0
 \\
 \caption{Figure 3: Display maximum elevation on terminal.}
 \end{pic3}
+
+\newpage
+\raggedright
+\subsection{Generate "*.ppm" files, convert to "*.mp4" file}
+\begin{tcolorbox}
+\begin{lstlisting}
+etc................
+
+#USE "course.lib"
+
+VAL INT MaxFanOut IS 4:
+
+VAL INT MaxNodes IS 837:
+
+-- Uncomment to test generate PPM feature
+--#INCLUDE "./testGeneratePPM/nodes-test-include-cell-ver2.occ" -- Gen ppm
+
+-- Uncomment to Calculate max elevation
+#INCLUDE "nodes-test-include-cell.occ" -- Caculate max elevation
+PROC halongtp0(CHAN OF BYTE stdin, stdout, stderr)
+
+................etc
+\end{lstlisting}
+\end{tcolorbox}
+\\[1\baselineskip]
+
+- \textbf{*Note:} To use this feature. 
+
+\\[1\baselineskip]
+
+- \textbf{First}, we need to Find the section above in "halongtp0.occ" file. 
+
+\\[1\baselineskip]
+
+- \textbf{Second}, uncomment the line below:
+
+\\[1\baselineskip]
+
+\textbf{#INCLUDE "./testGeneratePPM/nodes-test-include-cell-ver2.occ"}
+ 
+\\[1\baselineskip]
+
+- \textbf{Last}, comment the line below: 
+
+\\[1\baselineskip]
+
+\textbf{#INCLUDE "nodes-test-include-cell.occ"}.
+
+\\[1\baselineskip]
+\begin{tcolorbox}
+Compile command: make cinema/ sudo make cinema 
+\end{tcolorbox}
+\\[1\baselineskip]
+\begin{tcolorbox}
+Clean *.ppm files command: make clean
+\end{tcolorbox}
 \end{document}
 

@@ -2543,8 +2543,8 @@ VAL INT MaxFanOut IS 4:
 
 VAL INT MaxNodes IS 837:
 
-#INCLUDE "nodes-test-include-cell.occ"
-
+--#INCLUDE "./testGeneratePPM/nodes-test-include-cell-ver2.occ" -- Test generate PPM feature
+#INCLUDE "nodes-test-include-cell.occ" -- Calculate max elevation
 PROC halongtp0(CHAN OF BYTE stdin, stdout, stderr)
 
 
