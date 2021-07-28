@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.12.13)  28 JUL 2021 07:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.12.13)  28 JUL 2021 10:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1067,12 +1067,12 @@ l.231 \end{pic3}
                 
 ? 
 [7 <./iot_project_3.png (PNG copy)>]
-Overfull \hbox (96.9993pt too wide) in paragraph at lines 247--249
+Overfull \hbox (96.9993pt too wide) in paragraph at lines 249--251
 [][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (41.49911pt too wide) in paragraph at lines 250--251
+Overfull \hbox (41.49911pt too wide) in paragraph at lines 252--253
 [][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
@@ -1083,7 +1083,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.256 \\
+l.258 \\
         [1\baselineskip]
 ? 
 
@@ -1093,7 +1093,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.260 \\
+l.262 \\
         [1\baselineskip]
 ? 
 
@@ -1103,7 +1103,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.264 \\
+l.266 \\
         [1\baselineskip]
 ? 
 
@@ -1113,25 +1113,25 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.268 \\
+l.270 \\
         [1\baselineskip]
 ? 
 ! Illegal parameter number in definition of \reserved@a.
 <to be read again> 
                    I
-l.270 ...atePPM/nodes-test-include-cell-ver2.occ"}
+l.272 ...atePPM/nodes-test-include-cell-ver2.occ"}
                                                   
 ? 
 ! Illegal parameter number in definition of \reserved@b.
 <to be read again> 
                    }
-l.270 ...atePPM/nodes-test-include-cell-ver2.occ"}
+l.272 ...atePPM/nodes-test-include-cell-ver2.occ"}
                                                   
 ? 
 ! You can't use `macro parameter character #' in horizontal mode.
 <recently read> ##
                   
-l.270 ...atePPM/nodes-test-include-cell-ver2.occ"}
+l.272 ...atePPM/nodes-test-include-cell-ver2.occ"}
                                                   
 ? 
 
@@ -1141,7 +1141,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.272 \\
+l.274 \\
         [1\baselineskip]
 ? 
 
@@ -1151,25 +1151,25 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.276 \\
+l.278 \\
         [1\baselineskip]
 ? 
 ! Illegal parameter number in definition of \reserved@a.
 <to be read again> 
                    I
-l.278 ...f{#INCLUDE "nodes-test-include-cell.occ"}
+l.280 ...f{#INCLUDE "nodes-test-include-cell.occ"}
                                                   .
 ? 
 ! Illegal parameter number in definition of \reserved@b.
 <to be read again> 
                    }
-l.278 ...f{#INCLUDE "nodes-test-include-cell.occ"}
+l.280 ...f{#INCLUDE "nodes-test-include-cell.occ"}
                                                   .
 ? 
 ! You can't use `macro parameter character #' in horizontal mode.
 <recently read> ##
                   
-l.278 ...f{#INCLUDE "nodes-test-include-cell.occ"}
+l.280 ...f{#INCLUDE "nodes-test-include-cell.occ"}
                                                   .
 ? 
 
@@ -1179,7 +1179,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.280 \\
+l.282 \\
         [1\baselineskip]
 ? 
 
@@ -1189,21 +1189,279 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.284 \\
+l.286 \\
         [1\baselineskip]
 ? 
-[8] (./report.aux) )
-(\end occurred inside a group at level 3)
+[8]
 
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.292 \\
+        [1\baselineskip]
+? 
+
+! LaTeX Error: Environment pic4 undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.293 \centering{\begin{pic4}
+                             }
+? 
+! Extra }, or forgotten \endgroup.
+l.293 \centering{\begin{pic4}}
+                              
+? 
+<iot_project_5.png, id=42, 1184.92688pt x 642.14906pt>
+File: iot_project_5.png Graphic file (type png)
+ <use iot_project_5.png>
+Package pdftex.def Info: iot_project_5.png used on input line 294.
+(pdftex.def)             Requested size: 276.00105pt x 149.57246pt.
+
+
+! LaTeX Error: \caption outside float.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.296 \caption
+              {Figure 4: Output files.}
+? 
+
+! LaTeX Error: \begin{document} ended by \end{pic4}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.297 \end{pic4}
+                
+? 
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.299 \\
+        [2\baselineskip]
+? 
+
+! LaTeX Error: Environment pic5 undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.300 \centering{\begin{pic5}
+                             }
+? 
+! Extra }, or forgotten \endgroup.
+l.300 \centering{\begin{pic5}}
+                              
+? 
+<iot_project_6.png, id=43, 500.62032pt x 334.24875pt>
+File: iot_project_6.png Graphic file (type png)
+ <use iot_project_6.png>
+Package pdftex.def Info: iot_project_6.png used on input line 301.
+(pdftex.def)             Requested size: 276.00105pt x 184.2862pt.
+
+
+! LaTeX Error: \caption outside float.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.303 \caption
+              {Figure 5: Output files.}
+? 
+
+! LaTeX Error: \begin{document} ended by \end{pic5}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.304 \end{pic5}
+                
+? 
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.306 \\
+        [2\baselineskip]
+? 
+
+! LaTeX Error: Environment pic6 undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.307 \centering{\begin{pic6}
+                             }
+? 
+! Extra }, or forgotten \endgroup.
+l.307 \centering{\begin{pic6}}
+                              
+? 
+<iot_project_7.png, id=44, 502.12593pt x 335.00156pt>
+File: iot_project_7.png Graphic file (type png)
+ <use iot_project_7.png>
+Package pdftex.def Info: iot_project_7.png used on input line 308.
+(pdftex.def)             Requested size: 276.00105pt x 184.14919pt.
+
+
+! LaTeX Error: \caption outside float.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.310 \caption
+              {Figure 6: Output files.}
+? 
+[9 <./iot_project_5.png (PNG copy)> <./iot_project_6.png (PNG copy)>]
+
+! LaTeX Error: \begin{document} ended by \end{pic6}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.311 \end{pic6}
+                
+? 
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.313 \\
+        [2\baselineskip]
+? 
+
+! LaTeX Error: Environment pic7 undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.314 \centering{\begin{pic7}
+                             }
+? 
+! Extra }, or forgotten \endgroup.
+l.314 \centering{\begin{pic7}}
+                              
+? 
+<iot_project_8.png, id=48, 499.11469pt x 331.2375pt>
+File: iot_project_8.png Graphic file (type png)
+ <use iot_project_8.png>
+Package pdftex.def Info: iot_project_8.png used on input line 315.
+(pdftex.def)             Requested size: 276.00105pt x 183.17181pt.
+
+
+! LaTeX Error: \caption outside float.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.317 \caption
+              {Figure 7: Output files.}
+? 
+
+! LaTeX Error: \begin{document} ended by \end{pic7}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.318 \end{pic7}
+                
+? 
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.320 \\
+        [2\baselineskip]
+? 
+
+! LaTeX Error: Environment pic8 undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.321 \centering{\begin{pic8}
+                             }
+? 
+! Extra }, or forgotten \endgroup.
+l.321 \centering{\begin{pic8}}
+                              
+? 
+<iot_project_9.png, id=49, 499.8675pt x 333.49594pt>
+File: iot_project_9.png Graphic file (type png)
+ <use iot_project_9.png>
+Package pdftex.def Info: iot_project_9.png used on input line 322.
+(pdftex.def)             Requested size: 276.00105pt x 184.14592pt.
+
+
+! LaTeX Error: \caption outside float.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.324 \caption
+              {Figure 8: Output files.}
+? 
+[10 <./iot_project_7.png (PNG copy)> <./iot_project_8.png (PNG copy)>]
+
+! LaTeX Error: \begin{document} ended by \end{pic8}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.325 \end{pic8}
+                
+? 
+[11 <./iot_project_9.png (PNG copy)>] (./report.aux) )
+(\end occurred inside a group at level 8)
+
+### simple group (level 8) entered at line 321 ({)
+### simple group (level 7) entered at line 314 ({)
+### simple group (level 6) entered at line 307 ({)
+### simple group (level 5) entered at line 300 ({)
+### simple group (level 4) entered at line 293 ({)
 ### simple group (level 3) entered at line 227 ({)
 ### simple group (level 2) entered at line 154 ({)
 ### simple group (level 1) entered at line 38 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 12811 strings out of 494953
- 243549 string characters out of 6180976
- 313871 words of memory out of 5000000
- 15877 multiletter control sequences out of 15000+600000
+ 12846 strings out of 494953
+ 244124 string characters out of 6180976
+ 313872 words of memory out of 5000000
+ 15907 multiletter control sequences out of 15000+600000
  8807 words of font info for 31 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  54i,6n,73p,828b,1454s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1215,10 +1473,10 @@ e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texli
 ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/f
 onts/type1/public/amsfonts/cm/cmsy9.pfb>
-Output written on report.pdf (8 pages, 516964 bytes).
+Output written on report.pdf (11 pages, 1533353 bytes).
 PDF statistics:
- 69 PDF objects out of 1000 (max. 8388607)
- 47 compressed objects within 1 object stream
+ 83 PDF objects out of 1000 (max. 8388607)
+ 53 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 28 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 53 words of extra memory for PDF output out of 10000 (max. 10000000)
 

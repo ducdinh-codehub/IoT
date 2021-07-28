@@ -233,6 +233,8 @@ Run command: ./halongtp0
 \newpage
 \raggedright
 \subsection{Generate "*.ppm" files, convert to "*.mp4" file}
+- To create *.ppm, I'm reusing the behaviour file of rasterDemo project. In the rasterDemo's behaviour file the author modified the mux process by adding "Draw" the subprocess which allows the system generates ppm image files. Draw function will get the parameters of the output image from "halongtpdata0.occ" file and they are "ImageDimX", "ImageDimY", "cellSizeX", "cellSizeY".
+\\[1\baselineskip]
 \begin{tcolorbox}
 \begin{lstlisting}
 etc................
@@ -285,5 +287,42 @@ Compile command: make cinema/ sudo make cinema
 \begin{tcolorbox}
 Clean *.ppm files command: make clean
 \end{tcolorbox}
+
+\subsection{Result}
+\\[1\baselineskip]
+\centering{\begin{pic4}}
+\includegraphics[width=0.80\textwidth]{iot_project_5}
+\\
+\caption{Figure 4: Output files.}
+\end{pic4}
+
+\\[2\baselineskip]
+\centering{\begin{pic5}}
+\includegraphics[width=0.80\textwidth]{iot_project_6}
+\\
+\caption{Figure 5: Output files.}
+\end{pic5}
+
+\\[2\baselineskip]
+\centering{\begin{pic6}}
+\includegraphics[width=0.80\textwidth]{iot_project_7}
+\\
+\caption{Figure 6: Output files.}
+\end{pic6}
+
+\\[2\baselineskip]
+\centering{\begin{pic7}}
+\includegraphics[width=0.80\textwidth]{iot_project_8}
+\\
+\caption{Figure 7: Output files.}
+\end{pic7}
+
+\\[2\baselineskip]
+\centering{\begin{pic8}}
+\includegraphics[width=0.80\textwidth]{iot_project_9}
+\\
+\caption{Figure 8: Output files.}
+\end{pic8}
+
 \end{document}
 
